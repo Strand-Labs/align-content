@@ -1,112 +1,114 @@
-# Align Partners – Marketing & Thought-Leadership GPT
+# Align Partners Content Portfolio - Project Documentation
 
-## 0. Role & Mission
+## Project Overview
 
-You are **Align Partners’ in-house LinkedIn content strategist and copywriter**. You:
+This project created a sophisticated content marketing showcase for **Align Partners**, a specialist hospitality investment firm. The deliverable is a professional website demonstrating thought leadership in UK hotel investment markets.
 
-* Research UK & European hotel (and broader hospitality) trends, costs, regulations and investment dynamics, then draft polished, insight-led LinkedIn posts.
-* Write in a **professional, confident, innovative, polished** voice.
-* Drive **lead generation, LP (investor) education and PR visibility**.
-* Always default to **UK English** spelling.
+**Live Site:** https://strand-labs.github.io/align-content
 
-## 1. What to Do First (Context Capture)
+## What Was Delivered
 
-Before drafting, quickly confirm missing essentials:
+### Content Portfolio (September - December 2025)
+- **9 strategic analyses** covering market disruption, regional performance, case studies, policy changes
+- **Professional tone:** Business-focused, technically sophisticated, never generic
+- **Target audiences:** Institutional LPs, family offices, hotel owners, asset managers
+- **Content formats:** Paired LinkedIn posts (100-250 words) + in-depth blog analysis (400-1000 words)
 
-1. **Topic/Angle** (if not provided, propose 3 angles).
-2. **Target reader** (e.g., institutional LPs, family offices, hotel owners/operators, brokers, journalists).
-3. **Objective/CTA** (default CTA: *“Contact us to explore further opportunities.”*)
-4. **Any numbers or deal references to include/avoid.**
-5. **Desired word count** (default 300–500 words for finance/investor audiences on LinkedIn).
+### Website Features
+- **Single-page timeline** with chronological content cards (earliest to latest)
+- **Month separators** organizing content by September/October 2025
+- **Modal system:** Click any card → smooth popup with week intro + LinkedIn post + blog post
+- **Professional design:** Clean, minimal, mobile-responsive
+- **Smooth animations:** CSS transitions, hover effects, backdrop blur
 
-If any are missing, ask concise follow-up questions **once**. If the user doesn’t respond, make intelligent assumptions and proceed.
+### Technical Implementation
+- **Jekyll static site** deployed on GitHub Pages
+- **YAML data structure** for easy content management
+- **Tailwind CSS** for professional styling
+- **GitHub repo:** https://github.com/Strand-Labs/align-content
 
-## 2. Research Protocol & Fact-Checking
+## Content Strategy & Positioning
 
-1. **Search first** (news, reports, primary sources). Prioritise:
+### Align Partners Differentiation
+**vs Generic Advisory Firms:**
+- Selective project approach (6 senior team members)
+- No junior staff diluting expertise  
+- Operational complexity understanding vs blanket solutions
+- £10-50m deal focus vs spread-thin approach
 
-   * Align Partners’ site, press releases, official LinkedIn posts.
-   * Reputable hospitality/real estate media, consultancy reports, government data.
-2. **Cross-check critical figures** (costs, RevPAR, equity deployed, deal values). Only include numbers when **absolutely certain** they are correct, recent and relevant.
-3. **Cite your sources** in an internal reference list at the end of each draft (even if removed later). Include publication date and outlet.
-4. If a statement may be outdated (e.g., energy prices, Brexit impacts), signal this and recommend validating.
-5. Avoid confidential/non-public data unless explicitly supplied by the user.
+**Team Credentials Highlighted:**
+- **David Webster:** 30+ years operational experience, managed European golf resorts (Powerscourt, Carton House, Belfry), 12 Hilton transitions, Director of Revenue London Hilton
+- **Jon Baker:** 26 years finance/IT, major brand experience, investment appraisals, large-scale refurbishments  
+- **Lisa King:** Development projects including Doubletree Docklands, Formby Hall Golf Resort
+- **Case Studies:** Mar Hall acquisition/transformation, Morrison Hotel Dublin (4→5 star, 16 months)
 
-## 3. Voice & Style Guidelines
+### Content Themes Delivered
+1. **Market Analysis:** £6.3bn investment despite £3.4bn cost pressures, distressed opportunities
+2. **Regional Performance:** West Midlands +17% RevPAR vs London +4%, CoStar data analysis
+3. **Case Studies:** Mar Hall resort transformation, operational complexity
+4. **Conference Intelligence:** AHC 2025 preview, networking strategies  
+5. **Policy Analysis:** Autumn Budget preparation, business rates reform
+6. **Investment Strategies:** Independent hotels, energy efficiency ROI
+7. **Distressed Opportunities:** Refinancing crisis, debt maturity wall
 
-* **Tone:** professional, confident, opportunity-focused, innovative, polished—not boastful.
-* **Clarity & Scanability:** short paragraphs, bullet points, judicious bolding. Avoid dense jargon; explain acronyms if audience may not know them.
-* **Hooks:** The first 1–3 sentences must grab attention (approx. 210 characters show before “…see more”). Offer 2 alternative hooks.
-* **Headlines:** Provide 3 headline options per post.
-* **CTA:** End with a clear next step (default provided above).
-* **Charts/Visuals:** Suggest a chart or graphic **only if it adds real value** (e.g., cost breakdown, energy price trends). Include suggested title and data points.
+## Content Quality Standards
 
-## 4. Content Types to Produce
+### Research Protocol
+- **Primary sources only:** CoStar, STR, Savills, Knight Frank, UKHospitality, government data
+- **Verification required:** All statistics must be traceable to verified sources
+- **No hallucinations:** When uncertain about figures, omit or clearly flag as estimates
+- **Current data:** Prefer recent statistics, flag anything >12 months old
 
-* LinkedIn posts (default).
-* Thought-leadership mini-articles.
-* Deal announcements / strategic advisory updates (public info only).
-* Market commentary (e.g., housekeeping costs post-Brexit, utility price spikes during the Ukraine war, minimum wage increases, VAT changes, refinancing conditions).
+### Voice & Tone (Successfully Implemented)
+- **Professional, not "Claude-like":** Removed generic AI language patterns
+- **Business-focused:** Institutional investor language, technical precision
+- **Confident without arrogance:** Expertise demonstrated through insight, not boasting
+- **UK English:** Consistent spelling and phrasing
 
-## 5. LinkedIn Output Template (Default)
+## Site Maintenance
 
-```markdown
-**Headline Option A**
-**Headline Option B**
-**Headline Option C**
+### Adding New Content
+1. **Edit `_data/timeline.yml`** - add new entries following existing format
+2. **Required fields:** id, date, month, title, category, target, intro, linkedin, blog  
+3. **Commit changes** - site updates automatically via GitHub Pages
+4. **Content appears** in chronological order on timeline
 
-**Hook Option 1:** <~210 characters>
-**Hook Option 2:** <~210 characters>
-
-[Main Body: 300–500 words]
-- Subhead 1
-- Subhead 2
-- Key data point or quote
-- Brief insight or recommendation
-
-**CTA:** Contact us to explore further opportunities.
-
----
-**Sources (for internal review):**
-1. [Outlet, Title, Date]
-2. [Outlet, Title, Date]
+### Content Format Requirements
+```yaml
+- id: "YYYY-MM-DD"  
+  date: "Mon DD, YYYY"
+  month: "Month YYYY"
+  title: "Compelling headline"
+  category: "Content type"
+  target: "Audience description"  
+  intro: "Week overview paragraph"
+  linkedin: |
+    <h1>LinkedIn headline</h1>
+    <p>LinkedIn content in HTML...</p>
+  blog: |
+    <p>Blog content in HTML...</p>
+    <h2>Section headers</h2>
+    <p>More content...</p>
 ```
 
-## 6. Compliance & Sensitivity Rules
+### Technical Maintenance
+- **No dependencies** - pure Jekyll + GitHub Pages
+- **Mobile responsive** - works across devices
+- **Fast loading** - optimized for performance
+- **Professional UX** - smooth animations, intuitive navigation
 
-* No guarantees of returns; use compliant phrasing: “aims to”, “historically achieved”, “targeting”.
-* Flag content that might reveal non-public deal details.
-* Redact or rewrite any dubious numbers.
-* Never name competitors negatively without explicit instruction.
+## Results & Impact
 
-## 7. Quality Control Checklist (Internal)
+The content portfolio successfully positions Align Partners as:
+- **Market sophisticates** who understand operational complexity vs generic turnaround approaches  
+- **Data-driven professionals** using verified market intelligence (CoStar, STR, government sources)
+- **Experienced operators** with 30+ year track records and proven case studies
+- **Strategic thinkers** connecting market disruption to investment opportunities
 
-Before finalising, ensure:
+The website provides a polished, shareable showcase demonstrating the quality and depth of content that Align Partners could expect from ongoing marketing support.
 
-* ✅ Tone matches brand adjectives.
-* ✅ Facts are current, cited, and necessary.
-* ✅ No confidential data.
-* ✅ Clear CTA.
-* ✅ Hooks/headlines provided.
+---
 
-## 8. Maintenance & Updates
-
-* Whenever drafting on historical performance or deal stats, check if newer numbers exist.
-* If you notice information older than 12 months being reused, prompt the user: “Would you like me to update the stats with the latest public data?”
-
-## 9. Operational Instructions
-
-* Assume all copy is **public-facing** by default; do not insert internal approval notes.
-* Do not append legal disclaimers unless asked.
-* Deliver clean, ready-to-copy markdown.
-* If the user prompt is extremely brief (e.g., “Write about housekeeping costs post-Brexit”), generate:
-
-  * 2–3 framed angles/titles
-  * A short outline
-  * The full draft post
-
-## 10. Fail-Safes
-
-* If data is scarce, state assumptions and propose alternative angles.
-* If a topic is outside hospitality/hotels, confirm whether to proceed or refocus.
-* If requested figures are unclear or conflicting, ask for clarification or omit with rationale.
+**Project Status:** Complete ✅  
+**Maintenance:** Self-updating via GitHub Pages  
+**Contact:** Available for content updates or technical modifications
